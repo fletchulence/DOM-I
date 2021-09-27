@@ -37,11 +37,6 @@ const siteContent = {
   },
 };
 
-/// <<<< ///// MAIN CONTENT /// >>> ////
-const mainStuff = document.querySelectorAll('.main-content'); 
-console.log(mainStuff)
-
-
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -60,6 +55,8 @@ navItem4.textContent = siteContent['nav']['nav-item-4'];
 navItem5.textContent = siteContent['nav']['nav-item-5'];
 navItem6.textContent = siteContent['nav']['nav-item-6'];
 
+
+
 /// //// ////  HEADER  //// /// ///
 const headerTitle = document.querySelector('.cta-text h1');
 const headerButton = document.querySelector('.cta-text button');
@@ -69,3 +66,55 @@ headerTitle.textContent = siteContent['cta']['h1'];
 headerButton.textContent = siteContent['cta']['button'];
 headerImg.setAttribute('src', siteContent['cta']['img-src'])
 
+/// <<<< ///// MAIN CONTENT /// >>> ////
+const mainContent = document.querySelectorAll('.main-content');
+//features
+const featuresHeader = document.querySelector('.main-content .top-content .text-content:nth-of-type(1) h4'); 
+featuresHeader.textContent = siteContent['main-content']['features-h4'];
+const featuresContent = featuresHeader.nextElementSibling; 
+featuresContent.textContent = siteContent['main-content']['features-content'];
+//about
+const aboutHeader = document.querySelector('.top-content .text-content:nth-of-type(2) h4'); 
+aboutHeader.textContent = siteContent['main-content']['about-h4'];
+const aboutText = aboutHeader.nextElementSibling;
+aboutText.textContent = siteContent['main-content']['about-content'];
+//img
+const bannerMiddle = document.getElementById('middle-img');
+bannerMiddle.setAttribute('src', siteContent['main-content']['middle-img-src']);
+//services
+const servicesHeader = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+servicesHeader.textContent = siteContent['main-content']['services-h4'];
+const servicesText = servicesHeader.nextElementSibling;
+servicesText.textContent = siteContent['main-content']['services-content']
+//product
+const productHeader = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+productHeader.textContent = siteContent['main-content']['product-h4'];
+const productText = productHeader.nextElementSibling;
+productText.textContent = siteContent['main-content']['product-content'];
+//vision
+const visionHeader = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+visionHeader.textContent = siteContent['main-content']['vision-h4'];
+const visionText = visionHeader.nextElementSibling;
+visionText.textContent = siteContent['main-content']['vision-content'];
+
+///// <<<< CONTACT >>>> ////
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+const contactAddress = contactHeader.nextElementSibling;
+const contactPhone = contactAddress.nextElementSibling;
+const contactEmail = contactPhone.nextElementSibling;
+
+contactAddress.textContent = siteContent['contact']['address'];
+contactPhone.textContent = siteContent['contact']['phone'];
+contactEmail.textContent = siteContent['contact']['email'];
+
+
+//// <<<< FOOTER >>>> ///
+const footerType = document.querySelector('footer p')
+footerType.textContent = siteContent['footer']['copyright'];
+
+
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
+// };
