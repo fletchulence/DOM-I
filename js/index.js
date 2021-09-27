@@ -55,6 +55,22 @@ navItem4.textContent = siteContent['nav']['nav-item-4'];
 navItem5.textContent = siteContent['nav']['nav-item-5'];
 navItem6.textContent = siteContent['nav']['nav-item-6'];
 
+navItem1.style.color = 'green';
+navItem3.style.color = 'green';
+navItem5.style.color = 'green';
+navItem6.style.color = 'green';
+navItem2.style.color = 'green';
+navItem4.style.color = 'green';
+
+const newThingNav1 = document.createElement('a');
+newThingNav1.textContent = 'haha';
+newThingNav1.href = '#'
+document.querySelector('nav').appendChild(newThingNav1)
+
+const newThingNav2 = document.createElement('a');
+newThingNav2.textContent = 'woot';
+newThingNav2.href = '#'
+document.querySelector('nav').appendChild(newThingNav2)
 
 
 /// //// ////  HEADER  //// /// ///
@@ -114,7 +130,4 @@ const footerType = document.querySelector('footer p')
 footerType.textContent = siteContent['footer']['copyright'];
 
 
-// "footer": {
-//   "copyright" : "Copyright Great Idea! 2018"
-// },
-// };
+
